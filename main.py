@@ -7,6 +7,7 @@ import cv2
 
 #CONSTANTS
 API_ENDPOINT = 'https://shdu64vji0.execute-api.us-east-2.amazonaws.com/dev'
+IMG_PATH = './catgivingflower.jpg'
 
 def convertToGrayAPI(img):
 
@@ -29,9 +30,7 @@ def convertToGray(img):
 
 if __name__ == "__main__":
 
-    img_path = './catgivingflower.jpg'
-
-    img = cv2.imread(img_path)
+    img = cv2.imread(IMG_PATH)
 
     img_gray = convertToGrayAPI(img)
 
