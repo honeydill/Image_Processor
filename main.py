@@ -5,9 +5,10 @@ import numpy as np
 import requests
 import cv2
 
+#CONSTANTS
+API_ENDPOINT = 'https://shdu64vji0.execute-api.us-east-2.amazonaws.com/dev'
 
 def convertToGrayAPI(img):
-    API_ENDPOINT = 'https://shdu64vji0.execute-api.us-east-2.amazonaws.com/dev'
 
     is_success, im_buf_arr = cv2.imencode(".png", img)
     byte_im = im_buf_arr.tobytes()
